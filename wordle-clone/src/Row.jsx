@@ -7,7 +7,7 @@ const Row = ({ guess, targetWord }) => {
       return "correct";
     } else if (targetWord.includes(letter)) {
       return "present";
-    } else {
+    } else {            
       return "absent";
     }
   };
