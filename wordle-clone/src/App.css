@@ -81,10 +81,6 @@ main-container {
   min-height: calc(50vh - 10px)
 }
 
-.word-row .letter {
-  width: ;
-}
-
 .footer {
   position: fixed;
   bottom: 0;
