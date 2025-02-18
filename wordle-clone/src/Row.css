@@ -1,34 +1,31 @@
 .word-row {
   display: flex;
-  justify-content: center;
-  margin: 10px 0;
+  gap: 1px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: start;
+  align-content: start;
+  justify-content: center
+  padding
+
 }
 
 .letter {
+  display: flex;
+  flex-wrap: wrap;
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 5px;
+  margin: 0px, 0%;
   font-size: 24px;
   font-weight: bold;
   border: 2px solid #000;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.letter-input{
-    width: 30px;
-    height: 40px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2px;
-    font-size: 20px, bold, sans-serif;
-    font-weight: bold;
-    border: 1px solid #6fa3a2;
-    border-radius: 5px;
-    text-align: center;
-}
 
 .letter.correct {
   background-color: rgba(11, 246, 152, 0.949);
