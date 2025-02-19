@@ -11,6 +11,10 @@ const App = () => {
   const maxAttempts = 6;
 
   const handleInputChange = (e) => {
+    const value = e.target.value.toLowerCase();
+    if (value.length <= 5) {
+      setCurrentGuess(value);
+    }
     setCurrentGuess(e.target.value);
   };
 
