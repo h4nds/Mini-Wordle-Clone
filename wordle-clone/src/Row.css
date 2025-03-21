@@ -1,29 +1,26 @@
 .word-row {
   display: flex;
   gap: 1px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
-  align-items: start;
-  align-content: start;
-  justify-content: center
-  padding
+  align-items: center;
+  justify-content: center 
 
 }
 
 .letter {
   display: flex;
-  flex-wrap: wrap;
   width: 40px;
   height: 40px;
-  display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0px, 0%;
+  margin: 0 2px;
   font-size: 24px;
   font-weight: bold;
   border: 2px solid #000;
   border-radius: 5px;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 

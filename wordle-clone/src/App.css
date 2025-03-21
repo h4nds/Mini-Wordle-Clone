@@ -1,11 +1,12 @@
-main-container {
+.main-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  
+  justify-content: flex-start; /* Align rows to the top */
   align-items: center;
-  min-height: calc(100vh - 50px);
-  padding-bottom: 60px;
+  min-height: calc(100vh - 50px); /* Subtract footer height */
+  gap: 5px; /* Add consistent spacing between rows */
+  padding-bottom: 60px; /* Optional: Add padding around the container */
+  background-color: #1b2334;
 }
 
 .App-logo {
@@ -27,17 +28,45 @@ main-container {
   margin-bottom: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
-.App-header p{
-  font-size: 18px;
-  color: #8ea8df;
-  font-weight: bold;
-  margin-bottom: 15px;
-  border-radius: 50px;
-
+.word-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0; /* Reduce vertical margin between rows */
+  padding: 0; /* Remove any extra padding */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.guess-input {
+  width: 250px;
+  height: 40px;
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 1px;
+}
+
+.guess-input:focus {
+  border-color: #61dafb;
+  box-shadow: 0 0 5px rgba(97, 218, 251, 0.5);
+}
 .App-header {
+  background: linear-gradient(135deg, #434b6d, #1b2334);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
   background-color: #434b6d;
   min-height: 100vh;
   display: flex;
@@ -48,53 +77,58 @@ main-container {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #ccc;
+  font-size: 48px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
 
 @keyframes App-logo-spin {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.4); /* Slightly grow */
-    }
-    100% {
-      transform: scale(1); /* Back to original size */
-    }
-}
-
-.guess-input{
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  margin: 10px;
-  font-size: 24px;
-  font-weight: bold;
-  margin: 1px;
-}
-
-.word-row {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 10px;
-  min-height: calc(50vh - 10px)
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4); /* Slightly grow */
+  }
+  100% {
+    transform: scale(1); /* Back to original size */
+  }
 }
 
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #22273f;
-  color: white;
+  background-color: #1b2334;
+  color: #61dafb;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
+  font-size: 14px;
+  border-top: 2px solid #434b6d;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-  z-index: 1000; /* Ensure it stays on top of other elements */
 }
 
-form{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.button { 
+  background-color: #61dafb;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #264652;
+  transform: scale(1.05);
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
