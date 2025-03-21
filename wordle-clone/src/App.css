@@ -38,6 +38,18 @@
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.05);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .guess-input {
@@ -131,4 +143,64 @@
 .button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 2rem;
+  }
+
+  .guess-input {
+    width: 200px;
+    font-size: 16px;
+  }
+
+  .word-row {
+    margin: 3px 0;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
+
+.letter.correct {
+  background-color: rgba(11, 246, 152, 0.949);
+  color: rgba(6, 37, 23, 0.822);
+  box-shadow: 0 0 10px rgba(11, 246, 152, 0.8);
+}
+
+.game-over-message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.game-over-message.win {
+  color: #0f0;
+  background-color: rgba(0, 255, 0, 0.1);
+  border: 2px solid #0f0;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.game-over-message.lose {
+  color: #f00;
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 2px solid #f00;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
